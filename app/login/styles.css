@@ -1,0 +1,85 @@
+/* app/login/styles.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html, #__next, .login-container {
+  height: 100%;
+  background: linear-gradient(135deg, #6b00b6, #440074);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column; /* jadi vertikal */
+  align-items: center;    /* rata tengah secara horizontal */
+  justify-content: center; /* rata tengah secara vertikal */
+  gap: 1rem;  
+  background: rgba(255 255 255 / 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2.5rem;
+  border-radius: 24px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.login-container p {
+  font-size: 1rem;
+  margin-bottom: 2.2rem;
+  opacity: 0.85;
+}
+
+.google-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  color: #222;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
